@@ -1,0 +1,222 @@
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+/* The universal selector will select each and every element on the page.*/
+*, 
+*::after,
+*::before{
+    margin: 0;
+    padding: 0; 
+    box-sizing: inherit;
+}
+
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: gray;
+    padding: 2rem;
+    box-sizing: border-box; /* This property set border on each element on the webpage according to the 
+                                height and width of that element */
+}
+
+
+.header{
+    height: 95vh;
+
+    /* linear-gradient() function let put any color on any background. we must define at least
+    two color and set starting point and direction */
+    background-image:linear-gradient(to right bottom, 
+     rgba($color-primary-light, 0.8),
+     rgba($color-primary-dark, 0.8)), 
+     url(../img/hero.jpg);
+
+     /* background-image:radial-gradient(red, green, blue); */
+
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+}
+
+/*Styling logo division */
+.header__logo-box{
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+/*Styling logo */
+.header__logo{
+    height: 3.5rem;
+}
+
+/* logo animation */
+.logo:hover{
+    animation: moveInRight .5s ease-in;
+}
+
+/*primary heading */
+.header__text-box{
+    position: absolute;
+    /* background-color: red; */
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.heading-primary{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+}
+
+.heading-primary--main{
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+
+    /* These animation property required to work animation */
+    animation-name: moveInLeft;
+    animation-duration: 1s; /* will take 2 second to complete the animation */
+    
+    /*animation-delay: 2s*/            /* animation will play afer 2 second */
+    /*animation-iteration-count: 3;*/         /* animation will play 3 times at once */
+}
+
+.heading-primary--sub{
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2.15rem;
+    
+    /* shorthand for animation property value */
+    animation: moveInRight 1s ease-out;
+}
+
+/* CSS animation */
+
+/* after create animation, mention the animation name to the desired class which we want to animate */
+/* animation for moving left */
+@keyframes moveInLeft {
+    0%{
+        opacity: 0; /* for invisible specific part */
+        transform: translate(-100%);
+        
+    }
+
+    80%{
+        transform: translate(100px) 
+        /*rotate(180deg)*/;
+        
+    }
+    100%{
+         opacity: 1;
+         transform: translate(100px);
+    }
+    
+}
+
+/* animation for moving right */
+@keyframes moveInRight {
+    0%{
+        opacity: 0; /* for invisible specific part */
+        transform: translate(100%);
+    }
+
+    80%{
+        transform: translate(-20px) /*rotate(180deg)*/;
+        transform: rotate(90deg);
+        
+    }
+    100%{
+         opacity: 1;
+         transform: translate(0);
+         
+    }
+    
+}
+
+/* Header button style */
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;  /* we should give it while perform padding in inline element */
+    border-radius: 10rem; 
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);  /* 1st value is for X direction 
+                                        2nd for Y direction 3rd for blur and the 
+                                        4th value of rgba is the opacity*/
+
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+}
+.btn--white{
+    background-color: white;
+    color: gray;
+}
+
+
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute; /* absolute positioning need to have a reference of the first element that 
+                            have relative positioning */
+    z-index: -1; /* it defines position of the elements if they are one on top of another */
+    top: 0;
+    left: 0;
+    transition: all .4s;
+}
+
+.btn--white::after{
+    background-color: white;
+}
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6); /* It increase the elements size */
+    opacity: 0;
+}
+
+/*animation for moveing bottom(also we can use "moveInTop")*/
+@keyframes moveInBottom {
+    0%{
+        opacity: 0; /* for invisible specific part */
+        transform: translateY(3rem);
+    }
+    100%{
+         opacity: 1;
+         transform: translate(0);
+         
+    }
+    
+}
+
+.btn--animated{
+    animation: moveInBottom .5s ease-out .75s; /* It is the shorthand animation property i.e the 1st 
+                        value is "animation-name", "animation-duration", "animation-timing", 
+                        "animation-delay" */
+    animation-fill-mode: backwards; /* It autometically appy 0% before the animation start */ 
+}

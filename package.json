@@ -1,0 +1,27 @@
+{
+  "name": "advanced-css",
+  "version": "1.0.0",
+  "description": "Especially for advance experiment.",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.26.13",
+    "node-sass": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test.scss": "node-sass sass/test.scss css/test.css",
+    "sync": "browser-sync start --server --files \"*.html\"\"*.css\"",
+    "main.scss": "node-sass sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahatabhossain/advanced-css.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahatabhossain/advanced-css/issues"
+  },
+  "homepage": "https://github.com/mahatabhossain/advanced-css#readme"
+}
