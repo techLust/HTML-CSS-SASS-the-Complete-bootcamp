@@ -1,0 +1,44 @@
+.header{
+    height: 95vh;
+
+    /* linear-gradient() function let put any color on any background. we must define at least
+    two color and set starting point and direction */
+    background-image:linear-gradient(to right bottom, 
+     rgba($color-primary-light, 0.8),
+     rgba($color-primary-dark, 0.8)), 
+     url(../img/hero.jpg);
+
+     /* background-image:radial-gradient(red, green, blue); */
+
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    
+    ////we should prefix webkit to actually works across the different browser. 
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    @include respond(phone){
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)
+    }
+
+    /*Styling logo division */
+    &__logo-box{
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+        transition: all .2s;
+
+    }
+
+
+    /*Styling logo */
+    &__logo{
+        height: 3.5rem;
+        
+        // &:hover{
+        //     animation: moveInRight .2s ease-in;
+        // 
+    }
+}

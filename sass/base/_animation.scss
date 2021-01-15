@@ -1,0 +1,64 @@
+/* CSS animation */
+
+/* after create animation, mention the animation name to the desired class which we want to animate */
+/* animation for moving left */
+@keyframes moveInLeft {
+    0%{
+        opacity: 0; /* for invisible specific part */
+        transform: translate(-100%);
+        
+    }
+
+    80%{
+        transform: translate(100px) 
+        /*rotate(180deg)*/;
+        
+    }
+    100%{
+         opacity: 1;
+         transform: translate(100px);
+    }
+    
+}
+
+/* animation for moving right */
+@keyframes moveInRight {
+    0%{
+        opacity: 0; /* for invisible specific part */
+        transform: translate(100%);
+    }
+
+    80%{
+        transform: translate(-20px) /*rotate(180deg)*/;
+        transform: rotate(90deg);
+        
+    }
+    100%{
+         opacity: 1;
+         transform: translate(0);
+         
+    }
+    
+}
+
+
+/*animation for moveing bottom(also we can use "moveInTop")*/
+@keyframes moveInBottom {
+    0%{
+        opacity: 0; /* for invisible specific part */
+        transform: translateY(3rem);
+    }
+    100%{
+         opacity: 1;
+         transform: translate(0);
+         
+    }
+    
+}
+
+.btn--animated{
+    animation: moveInBottom .5s ease-out .75s; /* It is the shorthand animation property i.e the 1st 
+                        value is "animation-name", "animation-duration", "animation-timing", 
+                        "animation-delay" */
+    animation-fill-mode: backwards; /* It autometically appy 0% before the animation start */ 
+}

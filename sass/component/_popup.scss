@@ -1,0 +1,102 @@
+.popup{
+
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba($color-black, .8);
+    z-index: 3000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    
+    //for hide the popup section. it will not work on animatin. so use opacity.
+    // display: none;
+
+    &__content{
+        @include abscen;
+        width: 75%;
+        // height: 50%;
+        background-color: $color-white;
+        box-shadow: 0 2rem 4rem rgba($color-black, .2);
+        display: table;
+        overflow: hidden;
+        opacity: 0;
+        transform: translate(-50%,-50%) scale(.5);
+        transition: all .4s .2s;
+    }
+
+    &__left{
+        width: 33.33333%;
+        float: left;
+        display: table-cell;
+    }
+
+    &__right{
+        width: 66.666667%;
+        float: left;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 3rem 5rem;
+    }
+
+    &__img{
+        display: block;
+        width: 100%;
+
+    }
+
+    &__text{
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+
+        //create column in a paragraph on a division
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid $color-gray-dark-2;
+
+        -moz-column-count: 2;
+        -moz-column-gap: 4rem;
+        -moz-column-rule: 1px solid $color-gray-dark-2;
+
+        //hyphens property will autometically put hyphens where need. it might not working on some 
+        //browser so we need prefix.
+        hyphens: auto;
+
+        -moz-hyphens: auto; //for mozila firefox.
+        -ms-hyphens: auto; // for microsoft edge.
+        -webkit-hyphens: auto; //for chrome and safari.
+
+
+    }
+
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content{
+        opacity: 1;
+        transform: translate(-50%,-50%) scale(1);
+    }
+
+    &__close{
+        &:link,
+        &:visited{
+            color: $color-gray-dark;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all .2s;
+            line-height: 1;
+        }
+
+        &:hover{
+            color: $color-primary;
+        }
+    }
+}

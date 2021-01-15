@@ -1,0 +1,97 @@
+/* Header button style */
+.btn{
+&,
+&:link,
+&:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;  /* we should give it while perform padding in inline element */
+    border-radius: 10rem; 
+    transition: all .2s;
+    position: relative;
+
+    //modificaton for button element
+    border: none;
+    cursor: pointer;
+}
+
+&:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black,.2);  /* 1st value is for X direction 
+                                        2nd for Y direction 3rd for blur and the 
+                                        4th value of rgba is the opacity*/
+    &::after{
+    transform: scaleX(1.4) scaleY(1.6); /* It increase the elements size */
+    opacity: 0;
+}
+
+}
+
+&:active,
+&:focus{
+    //prevent outline when active and focus the element.
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+}
+&--white{
+    background-color: $color-white;
+    color: $color-gray-dark;
+
+    &::after{
+        background-color: $color-white;
+    }
+}
+
+// Green button
+&--green{
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after{
+        background-color: $color-primary;
+    }
+}
+
+
+&::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute; /* absolute positioning need to have a reference of the first element that 
+                            have relative positioning */
+    z-index: -1; /* it defines position of the elements if they are one on top of another */
+    top: 0;
+    left: 0;
+    transition: all .4s;
+}
+}
+
+.btn-text{
+    // float: left;
+    &:link,
+    &:visited{
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+        transition: all .2s;
+    }
+
+    &:hover{
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        transform: translateY(-2px);
+    }
+
+    &:active{
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+        transform: translateY(0);
+    }
+}

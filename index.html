@@ -7,12 +7,37 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
         <link rel="stylesheet" href="css/icon-font.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/main.css">
         <link rel="shortcut icon" href="img/favicon.png"> <!--showing icon in browser tab. -->
         
         <title>Exciting tours for adventurous people</title>
     </head>
     <body>
+
+        <!--Navigation should be top of the entire element-->
+
+        <div class = "navigation">
+            <input type = "checkbox" class = "navigation__checkbox" id="menu"> 
+
+            <label for = "menu" class = "navigation__button">
+                <span class = "navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class = "navigation__background">
+                &nbsp;
+            </div>
+
+            <nav class = "navigation__nav"> 
+                <ul class = "navigation__list">
+                    <li class = "navigation__item"><a href = "#" class = "navigation__link"><!--<span>1</span>--> Natous</a></li>
+                    <li class = "navigation__item"><a href = "#" class = "navigation__link"><!--<span>1</span>-->Your Benefits</a></li>
+                    <li class = "navigation__item"><a href = "#" class = "navigation__link"><!--<span>1</span>-->Popular Tours</a></li>
+                    <li class = "navigation__item"><a href = "#" class = "navigation__link"><!--<span>1</span>-->Stories</a></li>
+                    <li class = "navigation__item"><a href = "#" class = "navigation__link"><!--<span>1</span>-->Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+
 
         <!-- Header section-->
         <header class = "header"> 
@@ -30,11 +55,482 @@
             </h1>
 
             <!-- Header button-->
-            <a href = "#" class = "btn btn--white btn--animated"> Discover Our Tours</a> <!--more than
-                                                    one class can be worked on one element-->
+            <!--"#footer" will redirect to the footer section like hyperlink-->
+            <!-- <a href = "#footer" class = "btn btn--white btn--animated"> Discover Our Tours</a>  -->
+            <a href = "#" class = "btn btn--white btn--animated"> Discover Our Tours</a> 
+                                                                                 <!--more than
+                                                            one class can be worked on one element-->
         </div>
         </header>
 
 
+        <!--Main segment-->
+        <main>
+
+        <!--ABOUT SECTION-->
+            <section class = "section-about">
+
+                <!--Utility class-->
+                <div class = "u-center-text u-margin-bottom-big">
+                    <h2 class = "heading-secondary">
+                        Exciting tours for adventurous people
+                    </h2>
+                </div>   
+                
+                <!--text content-->
+                <div class = "row">
+                    <div class = "col-1-of-2">
+                        <h3 class = "heading-tertiary u-margin-bottom-small ">You are going to fall in love with nature </h3>
+                            <p class = "paragraph">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum maiores tempore quis, tempora, placeat explicabo quaerat eos provident non nam magnam nisi cumque quod natus aliquam aperiam fuga. Accusantium, ab?
+                            </p>
+                        
+
+                        <h3 class = "heading-tertiary u-margin-bottom-small">Live adventurous like you never have before </h3>
+                            <p class = "paragraph">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur dolorum itaque, perferendis doloribus explicabo quaerat eos provident..
+                            </p>
+                        <a href = "#" class = "btn-text">Learn more &rarr;</a>
+                    </div>
+
+                    <!--Image content-->
+                    <div class = "col-1-of-2">
+                        <div class = "composition">
+                            <img src = "img/nat-1-large.jpg" alt = "photo-1" class = "composition__photo composition__photo--p1">
+                            <img src = "img/nat-2-large.jpg" alt = "photo-2" class = "composition__photo composition__photo--p2">
+                            <img src = "img/nat-3-large.jpg" alt = "photo-3" class = "composition__photo composition__photo--p3">
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!--FEATURES SECTION-->
+            <section class = "sections-features">
+                <div class="row">
+                    <div class = "col-1-of-4">
+                        <div class = "feature-box">
+                            <i class = "feature-box__icon icon-basic-world"></i>
+                            <h3 class = "heading-tertiary u-margin-bottom-small">Explore the world </h3>
+                            <p class = "feature-box__text">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum maiores tempore quis.tempora, placeat explicabo quaerat eos.
+                            </p>
+                        </div>
+                    </div>
+
+                     <div class = "col-1-of-4">
+                        <div class = "feature-box">
+                            <i class = "feature-box__icon icon-basic-compass"></i>
+                            <h3 class = "heading-tertiary u-margin-bottom-small">Meet nature</h3>
+                            <p class = "feature-box__text">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum maiores tempore quis.tempora, placeat explicabo quaerat eos.
+                            </p>
+                        </div>
+                    </div>
+
+                     <div class = "col-1-of-4">
+                        <div class = "feature-box">
+                            <i class = "feature-box__icon icon-basic-map"></i>
+                            <h3 class = "heading-tertiary u-margin-bottom-small">Find your way</h3>
+                            <p class = "feature-box__text">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum maiores tempore quis.tempora, placeat explicabo quaerat eos.
+                            </p>
+                        </div>
+                    </div>
+
+                     <div class = "col-1-of-4">
+                        <div class = "feature-box">
+                            <i class = "feature-box__icon icon-basic-heart"></i>
+                            <h3 class = "heading-tertiary u-margin-bottom-small">Live a helpful life </h3>
+                            <p class = "feature-box__text">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum maiores tempore quis.tempora, placeat explicabo quaerat eos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--TOUR SECTION-->
+    <section class = "section-tour">
+                <div class = "u-center-text u-margin-bottom-big">
+                    <h2 class = "heading-secondary">
+                        Most popular tours
+                    </h2>
+                </div>
+
+            <div class = "row">
+
+                <!--column one-->
+                    <div class = "col-1-of-3">
+                        <div class = "card">
+                        <!--Front side-->
+                            <div class = "card__side card__side--front">
+                                <!--Card front picture-->
+                                <div class = "card__picture card__picture--1">
+                                    &nbsp;
+                                </div>
+                                <!--Card front headig -->
+                                <h4 class = "card__heading">
+                                    <span class = "card__heading-span card__heading-span--1">The See Explorer</span>
+                                </h4>
+                                <!--Card front details-->
+                                <div class = "card__details">
+                                    <ul>
+                                        <li>Three day tour</li>
+                                        <li>Up to thirty people</li>
+                                        <li> Two tour guide</li>
+                                        <li>Sleep in a cozy hotel</li>
+                                        <li>Difficulty:easy</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        <!--Back side-->
+                        <div class = "card__side card__side--back card__side--back-1">
+                            <div class = "card__cta">
+                                <div class = "card__price-box">
+                                    <p class="card__price-only">Only</p>
+                                    <p class = "card__price-value">$297</p>
+                                </div>
+
+                                <a href="#popup" class="btn btn--white">Book now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--column two-->
+                    <div class = "col-1-of-3">
+                        <div class = "card">
+                        <!--Front side-->
+                            <div class = "card__side card__side--front">
+                                <!--Card front picture-->
+                                <div class = "card__picture card__picture--2">
+                                    &nbsp;
+                                </div>
+                                <!--Card front heading-->
+                                <h4 class="card__heading">
+                                    <span class = "card__heading-span card__heading-span--2">The forest hicker</span>
+                                </h4>
+                                <!--Card fornt details-->
+                                <div class = "card__details">
+                                    <ul>
+                                        <li>7 days tour</li>
+                                        <li>Up to fourty people</li>
+                                        <li>Six tour guide</li>
+                                        <li>Sleep in a provided tents</li>
+                                        <li>Difficulty: medium</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        <!--Back side-->
+                        <div class = "card__side card__side--back card__side--back-2">
+                            <div class = "card__cta">
+                                <div class = "card__price-box">
+                                    <p class = "card__price-only">Only</p>
+                                    <p class = "card__price-value">$497</p>
+                                </div>
+
+                                <a href = "#popup" class = "btn btn--white">Book now</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                <!--column three-->
+                <div class = "col-1-of-3">
+                <div class = "card">
+                <!--Front side-->
+                    <div class = "card__side card__side--front">
+                        <!--Card front picture-->
+                        <div class = "card__picture card__picture--3">
+                            &nbsp;
+                        </div>
+                        <!--Card front heading-->
+                        <h4 class="card__heading">
+                            <span class = "card__heading-span card__heading-span--3">The forest hicker</span>
+                        </h4>
+                        <!--Card fornt details-->
+                        <div class = "card__details">
+                            <ul>
+                                <li>7 days tour</li>
+                                <li>Up to fourty people</li>
+                                <li>Six tour guide</li>
+                                <li>Sleep in a provided tents</li>
+                                <li>Difficulty: medium</li>
+                            </ul>
+                        </div>
+                    </div>
+                <!--Back side-->
+                <div class = "card__side card__side--back card__side--back-3">
+                    <div class = "card__cta">
+                        <div class = "card__price-box">
+                            <p class = "card__price-only">Only</p>
+                            <p class = "card__price-value">$897</p>
+                        </div>
+
+                        <a href = "#popup" class = "btn btn--white">Book now</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+
+            <div class = "u-center-text u-margin-top-big">
+                <a href="#" class = "btn btn--green">Discover all tours</a>
+            </div>
+    </section>
+
+
+    <!--STORY SECTION-->
+    <section class = "section-stories">
+
+        <!--Insert background video-->
+        <div class = "bg-video">
+            <video class = "bg-video__content" autoplay muted loop>
+                <source src = "img/video.mp4" type = "video/mp4">
+                <source src = "img/video.webm" type = "video/webm">
+
+                    <!--When a browser is not suppoert specified format it simply show the message-->
+                    Your browser is not supported !!
+            </video>
+        </div>
+        <div class = "u-center-text u-margin-bottom-big">
+            <h2 class = "heading-secondary">
+                We make people genuinely happy
+            </h2>
+        </div>
+
+        <div class = "row">
+            <div class = "story">
+                <!--"figure elemetn is used to put image and caption-->
+                <figure class = "story__shape">
+                    <img src = "img/nat-8.jpg" alt="person at tour" class = "story__image">
+                    <figcaption class = "story__caption">Merry Smith</figcaption>
+                </figure>
+            <!--story text-->
+            <div class = "story__text">
+                <h3 class = "heading-tertiary u-margin-bottom-small"> I had the best week ever with my family</h3>
+                <p class = "#">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum maiores tempore quis.tempora, placeat explicabo quaerat eos adipisicing elit. Laborum maiores tempore quis.tempora, placeat explicabo quaerat eos. </p>
+            </div>
+        </div>
+        </div>
+
+        <div class = "row">
+            <div class = "story">
+                <!--"figure elemetn is used to put image and caption-->
+                <figure class = "story__shape">
+                    <img src = "img/nat-9.jpg" alt="person at tour" class = "story__image">
+                    <figcaption class = "story__caption">Jack Wilson</figcaption>
+                </figure>
+            <!--story text-->
+            <div class = "story__text">
+                <h3 class = "heading-tertiary u-margin-bottom-small"> It takes a lot set me on fire</h3>
+                <p class = "#">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum maiores tempore quis.tempora, placeat explicabo quaerat eos adipisicing elit. Laborum maiores tempore quis.tempora, placeat explicabo quaerat eos. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class = "u-center-text u-margin-top-huge">
+        <a href="#" class = "btn-text">Read all the stories &rarr;</a>
+    </div>
+    </section>
+
+    <!--BOOKING SECTION-->
+    <section class = "section-book">
+        <div class = "row">
+            <div class = "book">
+                <div class = "book__form">
+                    <form action = "#" class = "form">
+
+                        <div class="u-margin-bottom-medium">
+                            <h2 class = "heading-secondary">
+                                Start booking now !
+                            </h2>
+                        </div>
+                        
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder = "Full Name" id = "name" required>
+                            <label for="name" class="form__label">Full Name</label>
+                        </div>
+
+                        <div class = "form__group">
+                            <input type="text" class = "form__input" placeholder="Email Address" id = "email" required>
+                            <label for="email" class = "form__label">Email</label>
+                        </div>
+
+                        <div class="form__group u-margin-bottom-medium">
+                            <div class="form__radio-group">
+                                <!--Define name attribute into input element fot select one at a time-->
+                                <input type="radio" class="form__radio-input" id="small" name = "size">
+
+                                <!--custom radio buttonj-->
+                                <label for="small" class = "form__radio-label">
+                                    <span class = "form__radio-button"></span>
+                                    Small tour group
+                                </label>
+                            </div>
+                            <div class = "form__radio-group">
+                                <input type = "radio" class = "form__radio-input" id = "large" name = "size">
+                                <label for = "large" class = "form__radio-label">
+                                    <span class = "form__radio-button"></span>
+                                    Large tour group
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class = "form__group">
+                            <!--Every time form submit when get button element don't use a element for submit form-->
+                            <button class = "btn btn--green">Next step &rarr;</button>
+                        </div>
+                    </form>
+                    <!-- <a href="#" class="btn--green">Book now</a> -->
+                </div> 
+            </div>
+        </div>
+    </section>
+        </main>
+
+        <!--Footer is not main content so we should put it outside of main element-->
+
+        <!-- <footer class = "footer" id="footer"> -->
+            <footer class = "footer">
+            <div class = "footer__logo-box">
+                <img src = "img/logo-green-2x.png" alt = "full-logo" class = "footer__logo">
+            </div>
+
+            <div class = "row">
+                <div class = "col-1-of-2">
+                    <div class = "footer__navigation">
+                        <ul class = "footer__list">
+                            <li class ="footer__item"><a href = "#" class = "footer__link">Company</a></li>
+                            <li class ="footer__item"><a href = "#" class = "footer__link">Carrers</a></li>
+                            <li class ="footer__item"><a href = "#" class = "footer__link">Contact</a></li>
+                            <li class ="footer__item"><a href = "#" class = "footer__link">Terms</a></li>
+                            <li class ="footer__item"><a href = "#" class = "footer__link">Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class = "col-1-of-2">
+                    <p class = "footer__copyright">
+                        Built by <a href = "#" class = "footer__link">Mahatab Hossain</a> . Copyright &copy; 2021 by Mahtab Hossain.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!--POPUP SECTION-->
+        <div class = "popup" id="popup">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img src="img/nat-8.jpg" alt="tour photo" class="popup__img">
+                    <img src="img/nat-9.jpg" alt="tour photo" class="popup__img">
+                </div>
+
+                <div class="popup__right">
+                    <!--Close popup-->
+                    <a href="#sections-tours" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-medium">Start booking now</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; please read these terms before booking</h3>
+                    <p class= "popup__text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis laudantium, maiores temporibus rem quod nemo cum non in expedita nostrum excepturi suscipit? Facilis pariatur eum aliquid voluptas, autem distinctio fugit.
+                    </p>
+
+                    <a href = "#" class = "btn btn--green">Book now</a>
+                </div>
+
+                
+
+            </div>
+        </div>
+
     </body>
 </html>
+
+
+
+        <!--Fluid Grid System architecture experiments-->
+
+        <!-- <section class = "grid-test"> -->
+
+            <!--First Row -->
+
+            <!-- <div class = "row">
+                <div class = "col-1-of-2">
+                    Col-1-of-2
+                </div>
+                <div class = "col-1-of-2">
+                    Col-1-of-2
+                </div>
+            </div> -->
+
+            <!--Second Row-->
+
+            <!-- <div class = "row">
+                <div class = "col-1-of-3">
+                    Col-1-of-3
+                </div>
+                <div class = "col-1-of-3">
+                    Col-1-of-3
+                </div>
+                <div class = "col-1-of-3">
+                    Col-1-of-3
+                </div>
+            </div> -->
+
+            <!--Third row-->
+
+            <!-- <div class = "row">
+                <div class = "col-1-of-3">
+                    Col-1-of-3
+                </div>
+                <div class = "col-2-of-3">
+                    Col-2-of-3
+                </div>
+            </div> -->
+
+            <!--Forth row-->
+
+            <!-- <div class = "row">
+                <div class = "col-1-of-4">
+                    Col-1-of-4
+                </div>
+                <div class = "col-1-of-4">
+                    Col-1-of-4
+                </div>
+                <div class = "col-1-of-4">
+                    Col-1-of-4
+                </div>
+                <div class = "col-1-of-4">
+                    Col-1-of-4
+                </div>
+            </div> -->
+
+            <!--Fifth row-->
+
+            <!-- <div class = "row">
+                <div class = "col-1-of-4">
+                    Col-1-of-4
+                </div>
+                <div class = "col-1-of-4">
+                    Col-1-of-4
+                </div>
+                <div class = "col-2-of-4">
+                    Col-2-of-4
+                </div>
+            </div> -->
+
+            <!--Sixth row-->
+            
+            <!-- <div class = "row">
+                <div class = "col-1-of-4">
+                    Col-1-of-4
+                </div>
+                <div class = "col-3-of-4">
+                    Col-3-of-4
+                </div>
+            </div>
+
+        </section> -->

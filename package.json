@@ -9,9 +9,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test.scss": "node-sass sass/test.scss css/test.css",
+    "test.scss": "node-sass --watch sass/test.scss -o css",
     "sync": "browser-sync start --server --files \"*.html\"\"*.css\"",
-    "main.scss": "node-sass sass/main.scss css/style.css"
+    "main.scss": "node-sass --watch sass/main.scss -o css"
   },
   "repository": {
     "type": "git",

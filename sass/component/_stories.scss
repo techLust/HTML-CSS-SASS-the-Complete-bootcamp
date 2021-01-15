@@ -1,0 +1,88 @@
+.story{
+    // height: 10rem;
+    width: 75%;
+    background-color: $color-white;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    border-radius: 3px;
+    padding: 6rem;
+    padding-left: 9rem;
+    font-size: $default-font-size;
+    transform: skewX(-12deg);
+
+
+    @include respond(tab-port){
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone){
+        transform: skewX(0);
+    }
+    
+    &__shape{
+        width: 15rem;
+        height: 15rem;
+        // background-color: orangered;
+        float: left;    
+         //"-webkit-" prefix can help to support accross different browser
+         -webkit-clip-path: circle(50% at 50% 50%);
+
+         //create different shapes by changin their value.
+        clip-path: circle(50% at 50% 50%);
+
+        //"shape-outside" property along with function is used to different shape. firefox does not suppoet it.
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        transform: translateX(-3rem) skewX(12deg);
+        margin: 0 auto;
+        position:relative;
+
+        @include respond(phone){
+            transform: translateX(-3rem) skewX(0);
+        }
+       
+    }
+
+    &__image{
+        height: 100%;
+        // width: 100%;
+        transform: translateX(-4rem) scale(1.4);
+        backface-visibility: hidden;
+        transition: all .5s;
+    }
+
+    &__text{
+        transform: skewX(12deg);
+        @include respond(phone){
+            transform:skewX(0);
+        }
+    }
+
+    &__caption{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
+    }
+
+    &:hover &__caption{
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &__image{
+        
+        transform: translateX(-4rem) scale(1);
+
+        //we can do lot of things like blur, opacity, brightness, contrast and many ..l
+        filter: blur(3px) brightness(80%);  // brightness below 100% gets darker.
+    }
+}

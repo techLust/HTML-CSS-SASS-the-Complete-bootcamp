@@ -1,0 +1,68 @@
+//The universal selector will select each and every element on the page.
+*, 
+*::after,
+*::before{
+    margin: 0;
+    padding: 0; 
+    box-sizing: inherit;
+}
+
+
+
+html{
+    //This define  what 1rem is(1 rem=10px; 10px/16px = 62.5%)
+    font-size: 62.5%;
+
+
+    // @media (max-width: 600px){
+    //     font-size: 50%;
+    // }
+
+
+    /*
+    @include respond-phone{
+        font-size: 50%;             // 1 rem = 8px, 8/16 = 50%;
+    }
+    */
+
+/*
+    @include respond(phone){
+        font-size: 50%;                    // 1 rem = 8px, 8/16=50%;
+    }
+*/
+
+
+    @include respond(tab-land){         //width < 900?
+        font-size: 56.25%;               //1rem = 9px, 9/16=56.25%;
+    }
+
+    @include respond(tab-port){         //width < 600?
+        font-size: 50%;                 //1rem = 8px, 8/16=50%;
+    }
+
+
+    @include respond(phone){               //width < 600?
+        font-size: 30%;                     //1rem = 4.8px, 4.8/16=30%;
+    }
+      
+    @include respond(small-phone){
+        font-size: 20%;                 
+    }                                       
+
+    @include respond(big-desktop){
+        font-size:75%;                   // 1rem = 12px, 12/16=75%;
+    }
+
+}
+
+
+body{
+    box-sizing: border-box; /* This property set border on each element on the webpage according to the 
+                                height and width of that element */
+    padding: 2rem;
+
+    @include respond(tab-port){         //width < 600?
+        font-size: 50%;                 //1rem = 8px, 8/16=50%;
+        padding: 0;         //in portrait tab screen margin will no longer there.
+    }
+}

@@ -1,0 +1,112 @@
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color:$color-gray-dark;
+    
+
+}
+
+/*primary heading */
+    .header__text-box{
+    position: absolute;
+    /* background-color: red; */
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+
+/* logo animation */
+.logo:hover{
+    animation: moveInRight .5s ease-in;
+}
+
+
+.heading-primary{
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+
+    &--main{
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+    
+        /* These animation property required to work animation */
+        animation-name: moveInLeft;
+        animation-duration: 1s; /* will take 2 second to complete the animation */
+        
+        /*animation-delay: 2s*/            /* animation will play afer 2 second */
+        /*animation-iteration-count: 3;*/         /* animation will play 3 times at once */
+
+        @include respond(phone){
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
+    }
+    
+    &--sub{
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 2.15rem;
+        
+        /* shorthand for animation property value */
+        animation: moveInRight 1s ease-out;
+
+        @include respond(phone){
+            letter-spacing: .5rem;
+        }
+    }
+}
+
+
+//secondary header
+.heading-secondary{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image:linear-gradient(to right, $color-primary-light, $color-primary-dark);
+
+    //The background gets cliped exactly where the text is 
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+
+    @include respond(tab-port){
+        font-size: 2.5rem;
+    }
+
+    @include respond(phone){
+        font-size: 2rem;
+    }
+   
+
+    &:hover{
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+}
+
+
+//Tertiary header 
+.heading-tertiary{
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph{
+    font-size: 1.6rem;
+
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}

@@ -1,0 +1,78 @@
+
+.row{
+    max-width: $grid-width;
+    // background-color: #eee;
+    margin: 0 auto;
+   
+    //
+    &:not(:last-child){
+        margin-bottom: $gutter-vertical;
+    }
+
+    @include respond(tab-port){
+        margin-bottom: $gutter-vertical-small;
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
+
+    
+
+//@mixin include for fix height issue 
+    @include clearfix;
+
+    //Attribute selector "^" this symbol means it will select all the element in which the class attri
+    //bute starts with "col-".
+    // "*" it select all the classes which contains "col-" element.
+    // "$" it select all the classess which contains "col-" at the end.
+    
+    //We can select any attribute usig attribute selector.
+
+    [class^="col-"] {
+        // background-color: orange;
+        float:left;
+        // height: 50px;
+        // text-align: center;
+        padding: 1rem;
+
+        &:not(:last-child){
+            margin-right: $gutter-horizontal;
+
+            @include respond(tab-port){
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+
+       @include respond(tab-port){
+           width: 100% !important;  //Ignore all the subsequent rule and apply the !important postfix
+                                    //rule i.e it gives maximum priority.
+       } 
+    }
+
+    .col-1-of-2{
+        width: calc((100% - #{$gutter-horizontal}) / 2);
+        // height: $gutter-horizontal;
+        // text-align: center;
+        // padding-top: 1.5rem;
+    }
+
+    .col-1-of-3{
+        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+    }
+
+    .col-1-of-4 {
+        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+    }
+
+    .col-2-of-3{
+        width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) /3 ) + #{$gutter-horizontal })
+    }
+
+    .col-2-of-4{
+        width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+    }
+
+    .col-3-of-4{
+        width: calc(3* ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+    }
+}
