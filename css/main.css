@@ -203,6 +203,9 @@ body {
   @media (max-width: 56.25em) {
     .u-margin-bottom-big {
       margin-bottom: 5rem !important; } }
+  @media (max-width: 56.25em) {
+    .u-margin-bottom-big {
+      margin-top: 5rem !important; } }
 
 .u-margin-bottom-small {
   margin-bottom: 1.5rem !important; }
@@ -310,6 +313,13 @@ body {
         position: relative;
         width: 33.3333333%;
         box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2); } }
+    @media (max-width: 37.5em) {
+      .composition__photo {
+        float: left;
+        position: relative;
+        width: 33.3333333%;
+        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+        margin-bottom: 10rem; } }
     .composition__photo--p1 {
       left: 0;
       top: -2rem; }
@@ -963,6 +973,9 @@ body {
   margin-top: -20vh;
   background-size: cover; }
   @media (max-width: 56.25em) {
+    .section-about {
+      padding: 20rem 0; } }
+  @media (max-width: 37.5em) {
     .section-about {
       padding: 20rem 0; } }
 

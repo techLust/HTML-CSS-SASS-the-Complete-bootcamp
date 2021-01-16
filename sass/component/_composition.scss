@@ -18,6 +18,15 @@
 
         }
 
+        @include respond(phone){
+            float: left;
+            position: relative;
+            width: 33.3333333%;
+            box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
+            margin-bottom: 10rem;
+
+        }
+
         //Placing images as per the specific value.
         &--p1 {
             left: 0;

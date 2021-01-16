@@ -8,6 +8,10 @@
      @include respond(tab-port){
          margin-bottom: 5rem !important;
      }
+
+     @include respond(tab-port){
+        margin-top: 5rem !important;
+    }
 }
 
 
@@ -24,4 +28,7 @@
 
 //margin top
 .u-margin-top-big{margin-top: 8rem !important;}
-.u-margin-top-huge{margin-bottom: 10rem !important;}
+.u-margin-top-huge{
+    margin-bottom: 10rem !important;
+    
+}
