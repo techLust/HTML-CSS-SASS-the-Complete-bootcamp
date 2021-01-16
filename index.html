@@ -96,9 +96,37 @@
                     <!--Image content-->
                     <div class = "col-1-of-2">
                         <div class = "composition">
+
+                            <!--RESOLUTION SWITCHING
+                            we allow the browser to choose the best image for the current viewport and pixel density 
+                            situation.
+                            "sizes" attribute informs the browser about the approximate width of an image at different viewport
+                            width -->
+                            <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                                 sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                                 alt="photo-1"
+                                 class = "composition__photo composition__photo--p1"
+                                 src = "img/nat-1-large.jpg"> 
+
+                            <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 2000w"
+                                 sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                                 alt="photo-2"
+                                 class = "composition__photo composition__photo--p2"
+                                 src = "img/nat-2-large.jpg"> 
+
+                            <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 3000w"
+                                 sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                                 alt="photo-3"
+                                 class = "composition__photo composition__photo--p3"
+                                 src = "img/nat-3-large.jpg"> 
+
+
+                                <!--
                             <img src = "img/nat-1-large.jpg" alt = "photo-1" class = "composition__photo composition__photo--p1">
                             <img src = "img/nat-2-large.jpg" alt = "photo-2" class = "composition__photo composition__photo--p2">
                             <img src = "img/nat-3-large.jpg" alt = "photo-3" class = "composition__photo composition__photo--p3">
+                            -->
+                            
                         </div>
                     </div>
                 </div>
@@ -396,8 +424,29 @@
 
         <!-- <footer class = "footer" id="footer"> -->
             <footer class = "footer">
+
+                <!--ART DIRECTION
+                tells the browser to use one image for one  viewport and another image for another 
+                viewport.For this we should use "picture element"-->
             <div class = "footer__logo-box">
-                <img src = "img/logo-green-2x.png" alt = "full-logo" class = "footer__logo">
+
+                <picture class = "footer__logo">
+                    <source srcset="img/logo-green-small-1x.png 1x ,img/logo-green-small-2x.png 2x" 
+                            media="(max-width: 37.5rem)">
+
+                    <img srcset = " img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" 
+                         alt = "full-logo"
+                         src="img/logo-green-2x.png">
+                </picture>
+
+                <!--DENSITY SWITCHING
+
+                Use srcset instead src it allows to browser to choose best image
+                and 1x descriptor for low resolution screen and 2x for 
+                high resolution screen-->
+
+                <!-- <img srcset = " img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt = "full-logo"> -->
+                
             </div>
 
             <div class = "row">
