@@ -10,6 +10,31 @@
     opacity: 0;
     visibility: hidden;
     transition: all .3s;
+
+    //To blur background instead using color
+
+    // -webkit-backdrop-filter: blur(10px);
+    // backdrop-filter: blur(10px);
+    // -moz-backdrop-filter: blur(10px);
+
+
+    //"@supports" features query 
+    //If the specifies property work then it will apply the following, is called graceful degradation
+    // features query basically for older web browser that not supports advance property.
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)){
+
+    -webkit-backdrop-filter: blur(10px);
+
+    // backdrop-filter: brightness();
+    // backdrop-filter: invert();
+    
+    backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    background-color: rgba($color-black, .3);
+
+    }
+
+
     
     //for hide the popup section. it will not work on animatin. so use opacity.
     // display: none;

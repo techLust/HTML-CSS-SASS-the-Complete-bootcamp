@@ -66,3 +66,10 @@ body{
         padding: 0;         //in portrait tab screen margin will no longer there.
     }
 }
+
+
+// "::selection" pseudo element is used to apply manual color on selected area.  
+::selection{
+    background-color: $color-secondary-dark;
+    color: $color-white;
+}

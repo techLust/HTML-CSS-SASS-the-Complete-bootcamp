@@ -39,26 +39,29 @@ $breakpoint arguments choises
 
     //For small phone
     @if $breakpoint == small-phone {
-        @media(max-width: 21.87em){@content};        //350px
+
+        //"only screen" condition allows to apply media rules only on device screen \
+        //If someone try to print this page it will not work
+        @media only screen and(max-width: 21.87em){@content};        //350px
     }
 
     @if $breakpoint == phone {
-        @media(max-width: 37.5em){@content};        //600px
+        @media only screen and (max-width: 37.5em){@content};        //600px
     }
 
     //For portrait tablet
     @if $breakpoint == tab-port {
-        @media(max-width: 56.25em){@content};       //900px
+        @media only screen and (max-width: 56.25em){@content};       //900px
     }
 
     //For landscape tablet 
     @if $breakpoint == tab-land{
-        @media(max-width: 75em){@content};         //1200px
+        @media only screen and (max-width: 75em){@content};         //1200px
     }
 
     //For big desktop
     @if $breakpoint == big-desktop{
-        @media(min-width: 112.5em){@content};       //1800px
+        @media only screen and (min-width: 112.5em){@content};       //1800px
     }
 }
 

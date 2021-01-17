@@ -26,17 +26,28 @@
         // background-color: orangered;
         float: left;    
          //"-webkit-" prefix can help to support accross different browser
-         -webkit-clip-path: circle(50% at 50% 50%);
+        //  -webkit-clip-path: circle(50% at 50% 50%);
 
          //create different shapes by changin their value.
-        clip-path: circle(50% at 50% 50%);
+        // clip-path: circle(50% at 50% 50%);
 
         //"shape-outside" property along with function is used to different shape. firefox does not suppoet it.
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
+
+        // -webkit-shape-outside: circle(50% at 50% 50%);
+        // shape-outside: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
         margin: 0 auto;
         position:relative;
+        overflow: hidden;
+        border-radius: 50%;
+
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)){
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            border-radius: none;
+        }
 
         @include respond(phone){
             transform: translateX(-3rem) skewX(0);
