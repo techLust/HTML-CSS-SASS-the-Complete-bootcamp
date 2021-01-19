@@ -13,6 +13,11 @@
     @include respond(phone){
         padding: 20rem 0; 
     }
+
+    @include respond(small-phone){
+        padding: 28rem 0; 
+        
+    }
 }
 
 
@@ -68,12 +73,13 @@
 
 
     @include respond(tab-port){
-        padding: 10rem 0;
+        padding: 20rem 0;
     }
 
-    // @include respond(phone){
-    //     background-size: 100%;
-    // }
+    @include respond(phone){
+        background-size: 100%;
+        padding: 10rem 0;
+    }
 }
 
 //section-book
@@ -84,6 +90,11 @@
 
     @include respond(tab-port){
         padding: 10rem 0;
+        margin-top: -27rem;
+    }
+    @include respond(phone){
+        padding: 10rem 0;
+        margin-top: -27rem;
     }
 }
 

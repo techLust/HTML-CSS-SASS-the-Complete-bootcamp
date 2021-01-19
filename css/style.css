@@ -1003,6 +1003,9 @@ body {
   @media only screen and (max-width: 37.5em) {
     .section-about {
       padding: 20rem 0; } }
+  @media only screen and (max-width: 21.87em) {
+    .section-about {
+      padding: 28rem 0; } }
 
 .sections-features {
   background-color: #ebebe0;
@@ -1031,6 +1034,10 @@ body {
   padding: 15rem 0; }
   @media only screen and (max-width: 56.25em) {
     .section-stories {
+      padding: 20rem 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-stories {
+      background-size: 100%;
       padding: 10rem 0; } }
 
 .section-book {
@@ -1039,7 +1046,12 @@ body {
   margin-top: -20rem; }
   @media only screen and (max-width: 56.25em) {
     .section-book {
-      padding: 10rem 0; } }
+      padding: 10rem 0;
+      margin-top: -27rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-book {
+      padding: 10rem 0;
+      margin-top: -27rem; } }
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
