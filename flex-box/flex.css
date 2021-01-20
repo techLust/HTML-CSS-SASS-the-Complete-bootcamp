@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color:red ;
+    display: flex;
+    padding: 10px;
+    /* flex-direction: column; */
+
+
+}
+
+.item{
+    background-color: lightblue;
+    padding: 10px;
+    margin: 10px;
+}
+
