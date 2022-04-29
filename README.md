@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+# HTML, CSS, SASSS Experiments
 
-You can use the [editor on GitHub](https://github.com/mahatabhossain/advanced-css/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Landing page:
+![image](https://user-images.githubusercontent.com/51972218/166020558-8aa55661-7fb4-462c-be4b-86e9a4b64921.png)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Rest of the segments:
+![Screenshot from 2022-04-30 00-46-10](https://user-images.githubusercontent.com/51972218/166040251-12d01dff-d8c5-445b-8eb3-ce77bb3a1ca8.png)
 
-### Markdown
+![Screenshot from 2022-04-30 00-46-58](https://user-images.githubusercontent.com/51972218/166042540-82b69eab-8d5a-45e1-8b32-baa36c95afe6.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+![Screenshot from 2022-04-30 00-43-56](https://user-images.githubusercontent.com/51972218/166043356-05396934-f794-4d30-acc8-197fcddac990.png)
 
-```markdown
-Syntax highlighted code block
+![Screenshot from 2022-04-30 00-45-35](https://user-images.githubusercontent.com/51972218/166044925-eb65c337-385f-4a18-a8a1-0f53d133cfbb.png)
 
-# Header 1
-## Header 2
-### Header 3
+![Screenshot from 2022-04-30 00-44-28](https://user-images.githubusercontent.com/51972218/166045589-0decc648-4fdc-4a36-9bd3-12a65768b2b6.png)
 
-- Bulleted
-- List
+Responsive Layout:
 
-1. Numbered
-2. List
+![image](https://user-images.githubusercontent.com/51972218/166050769-03180ff1-0fbe-47c6-9713-d0d004c073cd.png)
 
-**Bold** and _Italic_ and `Code` text
+![image](https://user-images.githubusercontent.com/51972218/166052269-6a288960-94b6-4d61-8539-96ab8133e940.png)
 
-[Link](url) and ![Image](src)
-```
+![image](https://user-images.githubusercontent.com/51972218/166053074-ae2a57cb-7dcb-48eb-a69c-98a9e33670c8.png)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+![image](https://user-images.githubusercontent.com/51972218/166053626-d4d286d9-3df0-4662-9850-2f3735e8bce3.png)
 
-### Jekyll Themes
+![image](https://user-images.githubusercontent.com/51972218/166054580-abf022bb-cf6f-491e-a611-9b0b684af09b.png)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mahatabhossain/advanced-css/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+![image](https://user-images.githubusercontent.com/51972218/166054719-8f2847e5-4304-4f43-889c-5a177a9589d0.png)
 
-### Support or Contact
+![image](https://user-images.githubusercontent.com/51972218/166054903-4c8f0943-489d-42c3-b7d4-3bcc27f4b395.png)
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
